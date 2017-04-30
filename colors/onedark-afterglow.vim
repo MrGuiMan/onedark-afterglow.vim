@@ -110,21 +110,21 @@ endfunction
 " | Color Variables |
 " +-----------------+
 
-let s:red = { "gui": "#E06C75", "cterm": "204", "cterm16": "1" }
+let s:red = { "gui": "#B65177", "cterm": "132", "cterm16": "1" }
 let s:dark_red = { "gui": "#BE5046", "cterm": "196", "cterm16": "9" }
 
-let s:green = { "gui": "#98C379", "cterm": "114", "cterm16": "2" }
+let s:green = { "gui": "#B1C97E", "cterm": "150", "cterm16": "2" }
 
 let s:yellow = { "gui": "#E5C07B", "cterm": "180", "cterm16": "3" }
 let s:dark_yellow = { "gui": "#D19A66", "cterm": "173", "cterm16": "11" }
 
 let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" }
 
-let s:purple = { "gui": "#C678DD", "cterm": "170", "cterm16": "5" }
+let s:purple = { "gui": "#A186C3", "cterm": "140", "cterm16": "5" }
 
 let s:cyan = { "gui": "#56B6C2", "cterm": "38", "cterm16": "6" }
 
-let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16": "7" }
+let s:white = { "gui": "#EFF1F5", "cterm": "231", "cterm16": "7" }
 
 let s:black = { "gui": "#282C34", "cterm": "235", "cterm16": "0" }
 let s:visual_black = { "gui": "NONE", "cterm": "NONE", "cterm16": s:black.cterm16 } " Black out selected text in 16-color visual mode
@@ -142,21 +142,21 @@ let s:vertsplit = { "gui": "#181A1F", "cterm": "59", "cterm16": "15" }
 " +---------------------------------------------------------+
 
 call s:h("Comment", { "fg": s:comment_grey, "gui": "italic", "cterm": "italic" }) " any comment
-call s:h("Constant", { "fg": s:cyan }) " any constant
-call s:h("String", { "fg": s:green }) " a string constant: "this is a string"
-call s:h("Character", { "fg": s:green }) " a character constant: 'c', '\n'
-call s:h("Number", { "fg": s:dark_yellow }) " a number constant: 234, 0xff
-call s:h("Boolean", { "fg": s:dark_yellow }) " a boolean constant: TRUE, false
-call s:h("Float", { "fg": s:dark_yellow }) " a floating point constant: 2.3e10
+call s:h("Constant", { "fg": s:green }) " any constant
+call s:h("String", { "fg": s:dark_yellow }) " a string constant: "this is a string"
+call s:h("Character", { "fg": s:dark_yellow }) " a character constant: 'c', '\n'
+call s:h("Number", { "fg": s:purple }) " a number constant: 234, 0xff
+call s:h("Boolean", { "fg": s:purple }) " a boolean constant: TRUE, false
+call s:h("Float", { "fg": s:purple }) " a floating point constant: 2.3e10
 call s:h("Identifier", { "fg": s:red }) " any variable name
-call s:h("Function", { "fg": s:blue }) " function name (also: methods for classes)
-call s:h("Statement", { "fg": s:purple }) " any statement
-call s:h("Conditional", { "fg": s:purple }) " if, then, else, endif, switch, etc.
-call s:h("Repeat", { "fg": s:purple }) " for, do, while, etc.
-call s:h("Label", { "fg": s:purple }) " case, default, etc.
-call s:h("Operator", { "fg": s:purple }) " sizeof", "+", "*", etc.
+call s:h("Function", { "fg": s:green }) " function name (also: methods for classes)
+call s:h("Statement", { "fg": s:red }) " any statement
+call s:h("Conditional", { "fg": s:red }) " if, then, else, endif, switch, etc.
+call s:h("Repeat", { "fg": s:red }) " for, do, while, etc.
+call s:h("Label", { "fg": s:red }) " case, default, etc.
+call s:h("Operator", { "fg": s:red }) " sizeof", "+", "*", etc.
 call s:h("Keyword", { "fg": s:red }) " any other keyword
-call s:h("Exception", { "fg": s:purple }) " try, catch, throw
+call s:h("Exception", { "fg": s:red }) " try, catch, throw
 call s:h("PreProc", { "fg": s:yellow }) " generic Preprocessor
 call s:h("Include", { "fg": s:blue }) " preprocessor #include
 call s:h("Define", { "fg": s:purple }) " preprocessor #define
@@ -175,7 +175,7 @@ call s:h("Debug", {}) " debugging statements
 call s:h("Underlined", {}) " text that stands out, HTML links
 call s:h("Ignore", {}) " left blank, hidden
 call s:h("Error", { "fg": s:red }) " any erroneous construct
-call s:h("Todo", { "fg": s:purple }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+call s:h("Todo", { "fg": s:cyan }) " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
 " +----------------------------------------------------------------------+
 " | Highlighting Groups (descriptions and ordering from `:h hitest.vim`) |
@@ -235,21 +235,21 @@ call s:h("WildMenu", { "fg": s:black, "bg": s:blue }) " current match in 'wildme
 call s:h("cssAttrComma", { "fg": s:purple })
 call s:h("cssAttributeSelector", { "fg": s:green })
 call s:h("cssBraces", { "fg": s:white })
-call s:h("cssClassName", { "fg": s:dark_yellow })
-call s:h("cssClassNameDot", { "fg": s:dark_yellow })
+call s:h("cssClassName", { "fg": s:green })
+call s:h("cssClassNameDot", { "fg": s:green })
 call s:h("cssDefinition", { "fg": s:purple })
 call s:h("cssFontAttr", { "fg": s:dark_yellow })
 call s:h("cssFontDescriptor", { "fg": s:purple })
-call s:h("cssFunctionName", { "fg": s:blue })
+call s:h("cssFunctionName", { "fg": s:green })
 call s:h("cssIdentifier", { "fg": s:blue })
-call s:h("cssImportant", { "fg": s:purple })
+call s:h("cssImportant", { "fg": s:red })
 call s:h("cssInclude", { "fg": s:white })
-call s:h("cssIncludeKeyword", { "fg": s:purple })
-call s:h("cssMediaType", { "fg": s:dark_yellow })
+call s:h("cssIncludeKeyword", { "fg": s:red })
+call s:h("cssMediaType", { "fg": s:purple })
 call s:h("cssProp", { "fg": s:white })
-call s:h("cssPseudoClassId", { "fg": s:dark_yellow })
-call s:h("cssSelectorOp", { "fg": s:purple })
-call s:h("cssSelectorOp2", { "fg": s:purple })
+call s:h("cssPseudoClassId", { "fg": s:green })
+call s:h("cssSelectorOp", { "fg": s:white })
+call s:h("cssSelectorOp2", { "fg": s:red })
 call s:h("cssTagName", { "fg": s:red })
 
 " Go
@@ -257,7 +257,7 @@ call s:h("goDeclaration", { "fg": s:purple })
 
 " HTML
 call s:h("htmlTitle", { "fg": s:white })
-call s:h("htmlArg", { "fg": s:dark_yellow })
+call s:h("htmlArg", { "fg": s:green })
 call s:h("htmlEndTag", { "fg": s:white })
 call s:h("htmlH1", { "fg": s:white })
 call s:h("htmlLink", { "fg": s:purple })
@@ -268,58 +268,58 @@ call s:h("htmlTagName", { "fg": s:red })
 
 " JavaScript
 call s:h("javaScriptBraces", { "fg": s:white })
-call s:h("javaScriptFunction", { "fg": s:purple })
-call s:h("javaScriptIdentifier", { "fg": s:purple })
-call s:h("javaScriptNull", { "fg": s:dark_yellow })
-call s:h("javaScriptNumber", { "fg": s:dark_yellow })
-call s:h("javaScriptRequire", { "fg": s:cyan })
+call s:h("javaScriptFunction", { "fg": s:green })
+call s:h("javaScriptIdentifier", { "fg": s:blue })
+call s:h("javaScriptNull", { "fg": s:purple })
+call s:h("javaScriptNumber", { "fg": s:purple })
+call s:h("javaScriptRequire", { "fg": s:green })
 call s:h("javaScriptReserved", { "fg": s:purple })
 " https://github.com/pangloss/vim-javascript
-call s:h("jsArrowFunction", { "fg": s:purple })
-call s:h("jsClassKeyword", { "fg": s:purple })
+call s:h("jsArrowFunction", { "fg": s:blue })
+call s:h("jsClassKeyword", { "fg": s:blue })
 call s:h("jsClassMethodType", { "fg": s:purple })
 call s:h("jsDocParam", { "fg": s:blue })
 call s:h("jsDocTags", { "fg": s:purple })
-call s:h("jsExport", { "fg": s:purple })
-call s:h("jsExportDefault", { "fg": s:purple })
-call s:h("jsExtendsKeyword", { "fg": s:purple })
-call s:h("jsFrom", { "fg": s:purple })
-call s:h("jsFuncCall", { "fg": s:blue })
-call s:h("jsFunction", { "fg": s:purple })
+call s:h("jsExport", { "fg": s:red })
+call s:h("jsExportDefault", { "fg": s:red })
+call s:h("jsExtendsKeyword", { "fg": s:blue })
+call s:h("jsFrom", { "fg": s:red })
+call s:h("jsFuncCall", { "fg": s:green })
+call s:h("jsFunction", { "fg": s:blue })
 call s:h("jsGenerator", { "fg": s:yellow })
 call s:h("jsGlobalObjects", { "fg": s:yellow })
-call s:h("jsImport", { "fg": s:purple })
-call s:h("jsModuleAs", { "fg": s:purple })
-call s:h("jsModuleWords", { "fg": s:purple })
-call s:h("jsModules", { "fg": s:purple })
-call s:h("jsNull", { "fg": s:dark_yellow })
-call s:h("jsOperator", { "fg": s:purple })
-call s:h("jsStorageClass", { "fg": s:purple })
-call s:h("jsSuper", { "fg": s:red })
+call s:h("jsImport", { "fg": s:red })
+call s:h("jsModuleAs", { "fg": s:red })
+call s:h("jsModuleWords", { "fg": s:red })
+call s:h("jsModules", { "fg": s:red })
+call s:h("jsNull", { "fg": s:purple })
+call s:h("jsOperator", { "fg": s:red })
+call s:h("jsStorageClass", { "fg": s:blue }) " var, const, let...
+call s:h("jsSuper", { "fg": s:green })
 call s:h("jsTemplateBraces", { "fg": s:dark_red })
-call s:h("jsTemplateVar", { "fg": s:green })
-call s:h("jsThis", { "fg": s:red })
+call s:h("jsTemplateVar", { "fg": s:dark_yellow })
+call s:h("jsThis", { "fg": s:white })
 call s:h("jsUndefined", { "fg": s:dark_yellow })
 " https://github.com/othree/yajs.vim
 call s:h("javascriptArrowFunc", { "fg": s:purple })
-call s:h("javascriptClassExtends", { "fg": s:purple })
-call s:h("javascriptClassKeyword", { "fg": s:purple })
+call s:h("javascriptClassExtends", { "fg": s:blue })
+call s:h("javascriptClassKeyword", { "fg": s:dark_yellow })
 call s:h("javascriptDocNotation", { "fg": s:purple })
 call s:h("javascriptDocParamName", { "fg": s:blue })
-call s:h("javascriptDocTags", { "fg": s:purple })
+call s:h("javascriptDocTags", { "fg": s:blue })
 call s:h("javascriptEndColons", { "fg": s:white })
-call s:h("javascriptExport", { "fg": s:purple })
+call s:h("javascriptExport", { "fg": s:red })
 call s:h("javascriptFuncArg", { "fg": s:white })
-call s:h("javascriptFuncKeyword", { "fg": s:purple })
+call s:h("javascriptFuncKeyword", { "fg": s:blue })
 call s:h("javascriptIdentifier", { "fg": s:red })
-call s:h("javascriptImport", { "fg": s:purple })
+call s:h("javascriptImport", { "fg": s:red })
 call s:h("javascriptMethodName", { "fg": s:white })
 call s:h("javascriptObjectLabel", { "fg": s:white })
 call s:h("javascriptOpSymbol", { "fg": s:cyan })
 call s:h("javascriptOpSymbols", { "fg": s:cyan })
 call s:h("javascriptPropertyName", { "fg": s:green })
 call s:h("javascriptTemplateSB", { "fg": s:dark_red })
-call s:h("javascriptVariable", { "fg": s:purple })
+call s:h("javascriptVariable", { "fg": s:blue })
 
 " JSON
 call s:h("jsonCommentError", { "fg": s:white })
@@ -423,26 +423,26 @@ call s:h("rubySymbol", { "fg": s:cyan})
 " Sass
 " https://github.com/tpope/vim-haml
 call s:h("sassAmpersand", { "fg": s:red })
-call s:h("sassClass", { "fg": s:dark_yellow })
+call s:h("sassClass", { "fg": s:green })
 call s:h("sassControl", { "fg": s:purple })
 call s:h("sassExtend", { "fg": s:purple })
 call s:h("sassFor", { "fg": s:white })
-call s:h("sassFunction", { "fg": s:cyan })
+call s:h("sassFunction", { "fg": s:blue })
 call s:h("sassId", { "fg": s:blue })
 call s:h("sassInclude", { "fg": s:purple })
-call s:h("sassMedia", { "fg": s:purple })
+call s:h("sassMedia", { "fg": s:red })
 call s:h("sassMediaOperators", { "fg": s:white })
 call s:h("sassMixin", { "fg": s:purple })
 call s:h("sassMixinName", { "fg": s:blue })
 call s:h("sassMixing", { "fg": s:purple })
-call s:h("sassVariable", { "fg": s:purple })
+call s:h("sassVariable", { "fg": s:white })
 " https://github.com/cakebaker/scss-syntax.vim
-call s:h("scssExtend", { "fg": s:purple })
-call s:h("scssImport", { "fg": s:purple })
-call s:h("scssInclude", { "fg": s:purple })
+call s:h("scssExtend", { "fg": s:red })
+call s:h("scssImport", { "fg": s:red })
+call s:h("scssInclude", { "fg": s:red })
 call s:h("scssMixin", { "fg": s:purple })
 call s:h("scssSelectorName", { "fg": s:dark_yellow })
-call s:h("scssVariable", { "fg": s:purple })
+call s:h("scssVariable", { "fg": s:white })
 
 " TypeScript
 call s:h("typescriptReserved", { "fg": s:purple })
